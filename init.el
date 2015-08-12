@@ -17,6 +17,9 @@
 (set-selection-coding-system 'utf-8)
 (prefer-coding-system 'utf-8)
 
+;; fix backspace : emacs launched in terminal from mobaxterm
+(normal-erase-is-backspace-mode 1)
+
 ;; package management
 (require 'package)
 (add-to-list 'package-archives
@@ -31,9 +34,7 @@
     ;; tags creation/ code navigation using tags
     ggtags
     ;; for easy selection of item from any list
-    ido
-    ido-ubiquitous
-    smex
+    helm
     ;; project management
     projectile))
 
@@ -52,17 +53,9 @@
 (setq company-minimum-prefix-length 2)
 (global-company-mode 1)
 
-;; ido configurations
-(ido-mode 1)
-(ido-everywhere 1)
-
-;; ido ubiquitous
-(require 'ido-ubiquitous)
-(ido-ubiquitous-mode 1)
-
-;; smex
-(global-set-key (kbd "M-x") 'smex)
-(global-set-key (kbd "M-X") 'smex-major-mode-commands)
+;; helm
+(require 'helm-config)
+(helm-mode 1)
 
 ;; ggtags
 (add-hook 'c-mode-common-hook
