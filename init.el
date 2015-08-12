@@ -35,6 +35,8 @@
     ggtags
     ;; for easy selection of item from any list
     helm
+    helm-projectile
+    helm-ag
     ;; project management
     projectile))
 
@@ -69,8 +71,12 @@
 (setq c-default-style "linux"
             c-basic-offset 4)
 
+;; projectile
 ;; enable projectile globally
 (projectile-global-mode)
-
 ;; use caching
 (setq projectile-enable-caching t)
+;; helm projectile
+(require 'helm-projectile)
+(helm-projectile-on)
+
