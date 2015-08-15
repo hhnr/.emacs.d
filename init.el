@@ -58,6 +58,8 @@
 ;; helm
 (require 'helm-config)
 (helm-mode 1)
+;; bind M-x to helm-M-x
+(global-set-key (kbd "M-x") 'helm-M-x)
 
 ;; ggtags
 (add-hook 'c-mode-common-hook
