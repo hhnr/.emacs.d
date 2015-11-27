@@ -41,14 +41,17 @@
 
 ;; company mode
 (use-package company
-	     :ensure t)
+  :ensure t
+  :diminish company-mode)
 
 (setq company-minimum-prefix-length 2)
 (global-company-mode 1)
 
 ;; ggtags
 (use-package ggtags
-	     :ensure t)
+  :ensure t
+  :diminish ggtags-mode)
+
 (add-hook 'c-mode-common-hook
 	  (lambda ()
 	    (when (derived-mode-p 'c-mode 'c++-mode 'java-mode)
@@ -63,7 +66,7 @@
 ;; projectile
 ;; enable projectile globally
 (use-package projectile
-	     :ensure t)
+  :ensure t)
 (projectile-global-mode)
 ;; use caching
 (setq projectile-enable-caching t)
