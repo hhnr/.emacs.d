@@ -71,6 +71,16 @@
 ;; use caching
 (setq projectile-enable-caching t)
 
+;; counsel
+(use-package counsel
+  :ensure t
+  :config
+    (bind-keys
+      ("M-x"     . counsel-M-x)
+      ("C-x C-f" . counsel-find-file)
+      ("C-h v"   . counsel-describe-variable)
+      ("C-h f"   . counsel-describe-function)))
+
 ;; have automated customizations in separate file
 (setq custom-file "~/.emacs.d/custom.el")
 (load custom-file 'noerror)
