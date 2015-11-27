@@ -18,50 +18,37 @@
 (prefer-coding-system 'utf-8)
 
 ;; fix backspace : emacs launched in terminal from mobaxterm
-(normal-erase-is-backspace-mode 1)
+;; (normal-erase-is-backspace-mode 1)
 
-;; package management
+;;; Package management
+
+;; Please don't load outdated byte code
+(setq load-prefer-newer t)
+
 (require 'package)
-(add-to-list 'package-archives
-	     '("melpa" . "http://melpa.milkbox.net/packages/") t)
+(setq package-enable-at-startup nil)
+(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
+
 (package-initialize)
 
-(defconst my-packages
-  '(;; code completion
-    company
-    ;; vim emulation
-    evil
-    ;; tags creation/ code navigation using tags
-    ggtags
-    ;; for easy selection of item from any list
-    helm
-    helm-projectile
-    helm-ag
-    ;; project management
-    projectile))
+;; Bootstrap `use-package'
+(unless (package-installed-p 'use-package)
+  (package-refresh-contents)
+  (package-install 'use-package))
 
-(defun install-packages ()
-  "Install all required packages."
-  (interactive)
-  (unless package-archive-contents
-    (package-refresh-contents))
-  (dolist (package my-packages)
-    (unless (package-installed-p package)
-      (package-install package))))
-
-(install-packages)
+(eval-when-compile
+  (require 'use-package))
 
 ;; company mode
+(use-package company
+	     :ensure t)
+
 (setq company-minimum-prefix-length 2)
 (global-company-mode 1)
 
-;; helm
-(require 'helm-config)
-(helm-mode 1)
-;; bind M-x to helm-M-x
-(global-set-key (kbd "M-x") 'helm-M-x)
-
 ;; ggtags
+(use-package ggtags
+	     :ensure t)
 (add-hook 'c-mode-common-hook
 	  (lambda ()
 	    (when (derived-mode-p 'c-mode 'c++-mode 'java-mode)
@@ -75,10 +62,20 @@
 
 ;; projectile
 ;; enable projectile globally
+(use-package projectile
+	     :ensure t)
 (projectile-global-mode)
 ;; use caching
 (setq projectile-enable-caching t)
-;; helm projectile
-(require 'helm-projectile)
-(helm-projectile-on)
-
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages (quote (projectile ggtags company use-package))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
