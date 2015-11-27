@@ -67,15 +67,7 @@
 (projectile-global-mode)
 ;; use caching
 (setq projectile-enable-caching t)
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(package-selected-packages (quote (projectile ggtags company use-package))))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
+
+;; have automated customizations in separate file
+(setq custom-file "~/.emacs.d/custom.el")
+(load custom-file 'noerror)
