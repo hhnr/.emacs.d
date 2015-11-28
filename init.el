@@ -70,6 +70,7 @@
 (projectile-global-mode)
 ;; use caching
 (setq projectile-enable-caching t)
+(setq projectile-completion-system 'ivy)
 
 ;; counsel
 (use-package counsel
