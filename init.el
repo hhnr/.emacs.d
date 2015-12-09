@@ -27,6 +27,9 @@
 ;; Please don't load outdated byte code
 (setq load-prefer-newer t)
 
+;; increase gc-cons-threshold
+(setq gc-cons-threshold (* 100 1024 1024))
+
 (require 'package)
 (setq package-enable-at-startup nil)
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
