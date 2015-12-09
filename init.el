@@ -98,6 +98,15 @@
     (global-set-key (kbd "C-x l") 'counsel-locate)
     (global-set-key (kbd "C-S-o") 'counsel-rhythmbox)))
 
+(use-package which-key
+  :diminish (which-key-mode)
+  :ensure t
+  :config (which-key-mode))
+
+(use-package zenburn-theme
+  :ensure t
+  :config (load-theme 'zenburn t))
+
 ;; have automated customizations in separate file
 (setq custom-file "~/.emacs.d/custom.el")
 (load custom-file 'noerror)
