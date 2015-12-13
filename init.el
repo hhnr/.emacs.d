@@ -77,6 +77,10 @@
   :ensure t
   :config (helm-mode 1))
 
+(use-package helm-projectile
+  :ensure t
+  :config (helm-projectile-on))
+
 (use-package which-key
   :diminish (which-key-mode)
   :ensure t
