@@ -47,20 +47,19 @@
 ;; company mode
 (use-package company
   :ensure t
-  :diminish company-mode)
-
-(setq company-minimum-prefix-length 2)
-(global-company-mode 1)
+  :diminish company-mode
+  :init (setq company-minimum-prefix-length 2)
+  :config (global-company-mode 1))
 
 ;; ggtags
 (use-package ggtags
   :ensure t
-  :diminish ggtags-mode)
-
-(add-hook 'c-mode-common-hook
-	  (lambda ()
-	    (when (derived-mode-p 'c-mode 'c++-mode 'java-mode)
-	                    (ggtags-mode 1))))
+  :diminish ggtags-mode
+  :config
+  (add-hook 'c-mode-common-hook
+	    (lambda ()
+	      (when (derived-mode-p 'c-mode 'c++-mode 'java-mode)
+		(ggtags-mode 1)))))
 
 ;; c customizations
 (setq indent-tabs-mode nil)
@@ -69,13 +68,10 @@
             c-basic-offset 4)
 
 ;; projectile
-;; enable projectile globally
 (use-package projectile
-  :ensure t)
-(projectile-global-mode)
-;; use caching
-(setq projectile-enable-caching t)
-(setq projectile-completion-system 'ivy)
+  :ensure t
+  :init (setq projectile-enable-caching t)
+  :config (projectile-global-mode))
 
 ;; counsel
 (use-package counsel
