@@ -75,6 +75,7 @@
 
 (use-package helm
   :ensure t
+  :bind ("M-x" . helm-M-x)
   :config (helm-mode 1))
 
 (use-package helm-projectile
