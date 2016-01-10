@@ -84,6 +84,9 @@
 
 (use-package which-key
   :diminish (which-key-mode)
+  ;; display suggested keys properly when emacs launched from terminal
+  ;; see https://github.com/justbur/emacs-which-key/issues/96
+  :init (setq which-key-separator ":")
   :ensure t
   :config (which-key-mode))
 
