@@ -1,6 +1,8 @@
 
 ;; Don't show startup message
 (setq inhibit-startup-message t)
+;; display cursor as bar
+(setq-default cursor-type 'bar) 
 
 ;; disable auto-save and auto-backup
 (setq auto-save-default nil)
