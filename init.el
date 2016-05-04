@@ -1,9 +1,3 @@
-;; Don't show toolbar
-(if (fboundp 'menu-bar-mode) (menu-bar-mode -1))
-;; Don't show toolbar
-(if (fboundp 'tool-bar-mode) (tool-bar-mode -1))
-;; Don't show scrollbar
-(if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
 
 ;; Don't show startup message
 (setq inhibit-startup-message t)
@@ -19,16 +13,10 @@
 (set-selection-coding-system 'utf-8)
 (prefer-coding-system 'utf-8)
 
-;; fix backspace : emacs launched in terminal from mobaxterm
-;; (normal-erase-is-backspace-mode 1)
-
 ;;; Package management
 
 ;; Please don't load outdated byte code
 (setq load-prefer-newer t)
-
-;; increase gc-cons-threshold
-(setq gc-cons-threshold (* 100 1024 1024))
 
 (require 'package)
 (setq package-enable-at-startup nil)
@@ -84,15 +72,8 @@
 
 (use-package which-key
   :diminish (which-key-mode)
-  ;; display suggested keys properly when emacs launched from terminal
-  ;; see https://github.com/justbur/emacs-which-key/issues/96
-  :init (setq which-key-separator ":")
   :ensure t
   :config (which-key-mode))
-
-(use-package zenburn-theme
-  :ensure t
-  :config (load-theme 'zenburn t))
 
 ;; have automated customizations in separate file
 (setq custom-file "~/.emacs.d/custom.el")
