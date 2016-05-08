@@ -50,6 +50,11 @@
 	    (lambda ()
 	      (when (derived-mode-p 'c-mode 'c++-mode 'java-mode)
 		(ggtags-mode 1)))))
+;; Fix M-* in emacs25
+;; refer : https://github.com/leoliu/ggtags/issues/88
+(define-key global-map "\M-." 'ggtags-find-tag-dwim)
+(define-key global-map "\M-*" 'pop-tag-mark)
+
 
 ;; c customizations
 (setq indent-tabs-mode nil)
