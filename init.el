@@ -42,18 +42,14 @@
   :config (global-company-mode 1))
 
 ;; ggtags
-(use-package ggtags
+(use-package helm-gtags
   :ensure t
-  :diminish ggtags-mode
+  :diminish helm-gtags
   :config
   (add-hook 'c-mode-common-hook
 	    (lambda ()
 	      (when (derived-mode-p 'c-mode 'c++-mode 'java-mode)
-		(ggtags-mode 1)))))
-;; Fix M-* in emacs25
-;; refer : https://github.com/leoliu/ggtags/issues/88
-(define-key global-map "\M-." 'ggtags-find-tag-dwim)
-(define-key global-map "\M-*" 'pop-tag-mark)
+		(helm-gtags-mode 1)))))
 
 
 ;; c customizations
@@ -82,6 +78,8 @@
   :diminish (which-key-mode)
   :ensure t
   :config (which-key-mode))
+
+(load-theme 'tango-dark t)
 
 ;; have automated customizations in separate file
 (setq custom-file "~/.emacs.d/custom.el")
