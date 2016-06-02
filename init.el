@@ -79,6 +79,8 @@
   :ensure t
   :config (which-key-mode))
 
+(set-default-font "Ubuntu Mono")
+(set-face-attribute 'default nil :height 120)
 (load-theme 'tango-dark t)
 
 ;; have automated customizations in separate file
