@@ -15,6 +15,12 @@
 (set-selection-coding-system 'utf-8)
 (prefer-coding-system 'utf-8)
 
+;; after copy Ctrl+c in Linux X11, you can paste by `yank' in emacs
+(setq x-select-enable-clipboard t)
+
+;; after mouse selection in X11, you can paste by `yank' in emacs
+(setq x-select-enable-primary t)
+
 ;;; Package management
 
 ;; Please don't load outdated byte code
