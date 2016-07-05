@@ -48,14 +48,14 @@
   :config (global-company-mode 1))
 
 ;; ggtags
-(use-package helm-gtags
+(use-package ggtags
   :ensure t
-  :diminish helm-gtags
+  :diminish ggtags
   :config
   (add-hook 'c-mode-common-hook
 	    (lambda ()
 	      (when (derived-mode-p 'c-mode 'c++-mode 'java-mode)
-		(helm-gtags-mode 1)))))
+		(ggtags-mode 1)))))
 
 
 ;; c customizations
