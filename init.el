@@ -25,7 +25,6 @@
 
 ;; Please don't load outdated byte code
 (setq load-prefer-newer t)
-
 (require 'package)
 (setq package-enable-at-startup nil)
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
@@ -70,15 +69,15 @@
   :init (setq projectile-enable-caching t)
   :config (projectile-global-mode))
 
-(use-package helm
-  :ensure t
-  :bind ("M-x" . helm-M-x)
-  	("C-x C-f" . helm-find-files)
-  :config (helm-mode 1))
+;;(use-package helm
+ ;; :ensure t
+  ;;:bind ("M-x" . helm-M-x)
+ ;; 	("C-x C-f" . helm-find-files))
+;;  :config (helm-mode 1))
 
-(use-package helm-projectile
-  :ensure t
-  :config (helm-projectile-on))
+;;(use-package helm-projectile
+ ;; :ensure t
+  ;;:config (helm-projectile-on))
 
 (use-package which-key
   :diminish (which-key-mode)
@@ -89,6 +88,3 @@
 (set-face-attribute 'default nil :height 120)
 (load-theme 'tango-dark t)
 
-;; have automated customizations in separate file
-(setq custom-file "~/.emacs.d/custom.el")
-(load custom-file 'noerror)
