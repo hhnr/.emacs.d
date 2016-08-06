@@ -69,15 +69,15 @@
   :init (setq projectile-enable-caching t)
   :config (projectile-global-mode))
 
-;;(use-package helm
- ;; :ensure t
-  ;;:bind ("M-x" . helm-M-x)
- ;; 	("C-x C-f" . helm-find-files))
-;;  :config (helm-mode 1))
+(use-package helm
+  :ensure t
+  :bind ("M-x" . helm-M-x)
+  ("C-x C-f" . helm-find-files)
+  :config (helm-mode 1))
 
-;;(use-package helm-projectile
- ;; :ensure t
-  ;;:config (helm-projectile-on))
+(use-package helm-projectile
+ :ensure t
+ :config (helm-projectile-on))
 
 (use-package which-key
   :diminish (which-key-mode)
