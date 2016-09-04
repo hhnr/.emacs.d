@@ -3,7 +3,7 @@
 ;;; Code:
 (add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
-;;;### (autoloads nil "ggtags" "ggtags.el" (0 0 0 0))
+;;;### (autoloads nil "ggtags" "ggtags.el" (22476 18110 810417 845000))
 ;;; Generated autoloads from ggtags.el
 
 (autoload 'ggtags-find-project "ggtags" "\
@@ -40,8 +40,6 @@ A function suitable for `imenu-create-index-function'.
 A function suitable for `hippie-expand-try-functions-list'.
 
 \(fn OLD)" nil nil)
-
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "ggtags" '("ggtags-")))
 
 ;;;***
 

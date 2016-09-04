@@ -1,7 +1,10 @@
 
 ;; Don't show startup message
 (setq inhibit-startup-message t)
+
 ;; display cursor as bar
+;; FIXME : cursor doesn't change to bar in terminal
+;; cursor type changes to bar when using Emacs GUI
 (setq-default cursor-type 'bar) 
 
 ;; disable auto-save and auto-backup
@@ -84,5 +87,6 @@
   :ensure t
   :config (which-key-mode))
 
-(load-theme 'tango-dark t)
-
+;; no custom config in init file please
+(setq custom-file "~/.emacs.d/custom.el")
+(load custom-file 'noerror)
