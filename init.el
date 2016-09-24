@@ -87,6 +87,11 @@
   :ensure t
   :config (which-key-mode))
 
+(use-package monokai-theme
+  :ensure t
+  :config
+  (load-theme 'monokai t))
+
 ;; no custom config in init file please
 (setq custom-file "~/.emacs.d/custom.el")
 (load custom-file 'noerror)
