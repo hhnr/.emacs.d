@@ -69,19 +69,23 @@
 ;; projectile
 (use-package projectile
   :ensure t
+  :defer t
   :init (setq projectile-enable-caching t)
   :config (projectile-global-mode))
 
 ;; ivy mode
-(ivy-mode 1)
-(setq ivy-use-virtual-buffers t)
-(global-set-key "\C-s" 'swiper)
-(global-set-key (kbd "C-c C-r") 'ivy-resume)
-(global-set-key (kbd "M-x") 'counsel-M-x)
-(global-set-key (kbd "C-x C-f") 'counsel-find-file)
-(global-set-key (kbd "C-h f") 'counsel-describe-function)
-(global-set-key (kbd "C-h v") 'counsel-describe-variable)
-
+(use-package ivy
+  :ensure t
+  :init
+  (setq ivy-use-virtual-buffers t)
+  :config
+  (ivy-mode 1)
+  (global-set-key "\C-s" 'swiper)
+  (global-set-key (kbd "C-c C-r") 'ivy-resume)
+  (global-set-key (kbd "M-x") 'counsel-M-x)
+  (global-set-key (kbd "C-x C-f") 'counsel-find-file)
+  (global-set-key (kbd "C-h f") 'counsel-describe-function)
+  (global-set-key (kbd "C-h v") 'counsel-describe-variable))
 
 (use-package which-key
   :diminish (which-key-mode)
