@@ -69,7 +69,6 @@
 ;; projectile
 (use-package projectile
   :ensure t
-  :defer t
   :init (setq projectile-enable-caching t)
   :config (projectile-global-mode))
 
