@@ -35,6 +35,8 @@
 
 (eval-when-compile
   (require 'use-package))
+(setq use-package-verbose t)
+;;(setq use-package-always-defer t)
 
 ;; company mode
 (use-package company
@@ -46,7 +48,6 @@
 ;; ggtags
 (use-package ggtags
   :ensure t
-  :defer t
   :diminish ggtags
   :init
   (add-hook 'c-mode-common-hook
@@ -74,28 +75,28 @@
   (setq ivy-use-virtual-buffers t)
   :config
   (ivy-mode 1)
-  (global-set-key "\C-s" 'swiper)
-  (global-set-key (kbd "C-c C-r") 'ivy-resume)
-  (global-set-key (kbd "M-x") 'counsel-M-x)
-  (global-set-key (kbd "C-x C-f") 'counsel-find-file)
-  (global-set-key (kbd "C-h f") 'counsel-describe-function)
-  (global-set-key (kbd "C-h v") 'counsel-describe-variable))
+  :bind ("\C-s" . swiper)
+  ("C-c C-r" . ivy-resume)
+  ("M-x" . counsel-M-x)
+  ("C-x C-f" . counsel-find-file)
+)
 
 (use-package which-key
   :diminish (which-key-mode)
   :ensure t
   :config (which-key-mode))
 
-(use-package monokai-theme
-  :ensure t
-  :config
-  (load-theme 'monokai t))
-
 (use-package smart-mode-line
   :ensure t
   :config
   (setq sml/no-confirm-load-theme t)
   (sml/setup))
+
+(use-package monokai-theme
+  :ensure t
+  :config
+  (load-theme 'monokai t))
+
 
 ;; no custom config in init file please
 (setq custom-file "~/.emacs.d/custom.el")
