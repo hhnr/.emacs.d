@@ -68,18 +68,20 @@
   :init (setq projectile-enable-caching t)
   :config (projectile-global-mode))
 
-;; ivy mode
-(use-package ivy
+(use-package helm
   :ensure t
   :init
-  (setq ivy-use-virtual-buffers t)
+  (require 'helm-config)
+  (helm-mode)
+  :bind ("C-x C-f" . helm-find-files)
+  ("M-x" . helm-M-x)
+  ("C-x b" . helm-mini))
+
+(use-package helm-projectile
+  :ensure t
   :config
-  (ivy-mode 1)
-  :bind 
-  ("C-c C-r" . ivy-resume)
-  ("M-x" . counsel-M-x)
-  ("C-x C-f" . counsel-find-file)
-)
+  (require 'helm-projectile)
+  (helm-projectile-on))
 
 (use-package which-key
   :diminish (which-key-mode)
