@@ -79,7 +79,7 @@
 
 (use-package helm-projectile
   :ensure t
-  :config
+  :init
   (require 'helm-projectile)
   (helm-projectile-on))
 
