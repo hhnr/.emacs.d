@@ -83,6 +83,12 @@
   (require 'helm-projectile)
   (helm-projectile-on))
 
+(use-package helm-descbinds
+  :ensure t)
+
+(use-package helm-ag
+  :ensure t)
+
 (use-package which-key
   :diminish (which-key-mode)
   :ensure t
