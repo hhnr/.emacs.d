@@ -1,6 +1,4 @@
-* Find why the cursor doesn't change to bar when launched in terminal
 * Learn how to use helm-gtags instead of ggtags
 * proper usage of use-package and customize accordingly
-* try out counsel and related packages and move to counsel if possible
 * evil mode maybe?
 * learn to use magit.
