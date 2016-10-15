@@ -15,4 +15,7 @@
   :ensure t
   :config (which-key-mode))
 
+;; highlight matching parens
+(show-paren-mode)
+
 (provide 'init-misc)
