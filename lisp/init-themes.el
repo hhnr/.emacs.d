@@ -4,10 +4,10 @@
   (setq sml/no-confirm-load-theme t)
   (sml/setup))
 
-(use-package monokai-theme
+(use-package smyx-theme
   :ensure t
   :config
-  (load-theme 'monokai t))
+  (load-theme 'smyx t))
 
 
 (provide 'init-themes)
