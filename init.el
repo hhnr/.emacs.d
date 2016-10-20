@@ -105,6 +105,7 @@
 
 (use-package smart-mode-line
   :ensure t
+  :disabled t	     
   :config
   (setq sml/no-confirm-load-theme t)
   (sml/setup))
