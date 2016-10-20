@@ -3,8 +3,8 @@
 ;;; Code:
 (add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
-;;;### (autoloads nil "smyx-theme" "smyx-theme.el" (22536 5143 556510
-;;;;;;  390000))
+;;;### (autoloads nil "smyx-theme" "smyx-theme.el" (22536 52705 804336
+;;;;;;  290000))
 ;;; Generated autoloads from smyx-theme.el
 
 (when load-file-name (add-to-list 'custom-theme-load-path (file-name-as-directory (file-name-directory load-file-name))))

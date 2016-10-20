@@ -86,10 +86,10 @@
   :diminish helm-mode
   :init
   (require 'helm-config)
-  (helm-mode)
+  (helm-mode 1)
   :bind ("C-x C-f" . helm-find-files)
-  ("M-x" . helm-M-x)
-  ("C-x b" . helm-mini))
+  ("C-x b" . helm-mini)
+  ("M-x" . helm-M-x))
 
 (use-package helm-projectile
   :ensure t
