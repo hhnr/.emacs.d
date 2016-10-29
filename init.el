@@ -81,27 +81,19 @@
   :init (setq projectile-enable-caching t)
   :config (projectile-global-mode))
 
-(use-package helm
+(use-package ivy
   :ensure t
-  :diminish helm-mode
+  :diminish ivy-mode
   :init
-  (require 'helm-config)
-  (helm-mode 1)
-  :bind ("C-x C-f" . helm-find-files)
-  ("C-x b" . helm-mini)
-  ("M-x" . helm-M-x))
+  (ivy-mode 1)
+  :bind ("C-x C-f" . counsel-find-file)
+  ("C-h f" . counsel-describe-function)
+  ("M-x" . counsel-M-x))
 
-(use-package helm-projectile
+(use-package counsel-projectile
   :ensure t
   :init
-  (require 'helm-projectile)
-  (helm-projectile-on))
-
-(use-package helm-descbinds
-  :ensure t)
-
-(use-package helm-ag
-  :ensure t)
+  (counsel-projectile-on))
 
 (use-package smart-mode-line
   :ensure t
