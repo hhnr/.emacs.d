@@ -81,6 +81,11 @@
   :init (setq projectile-enable-caching t)
   :config (projectile-global-mode))
 
+;; smex - install smex so that counsel-M-x will show list
+;; based on command frequency
+(use-package smex
+  :ensure t)
+
 (use-package ivy
   :ensure t
   :diminish ivy-mode
