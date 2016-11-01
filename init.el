@@ -81,24 +81,51 @@
   :init (setq projectile-enable-caching t)
   :config (projectile-global-mode))
 
-;; smex - install smex so that counsel-M-x will show list
-;; based on command frequency
-(use-package smex
-  :ensure t)
+(use-package helm		
+  :ensure t		    
+  :diminish helm-mode		
+  :init		    
+   (require 'helm-config)
+   (helm-mode 1)	
+  :bind ("C-x C-f" . helm-find-files)
+   ("C-x b" . helm-mini)		
+   ("M-x" . helm-M-x))		
+  		  
+(use-package helm-projectile		
+  :ensure t		    
+  :init		    
+  (require 'helm-projectile)
+  (helm-projectile-on))		
+ 		
+(use-package helm-descbinds		
+  :ensure t)		
+ 		
+(use-package helm-ag		
+ :ensure t)
 
-(use-package ivy
-  :ensure t
-  :diminish ivy-mode
-  :init
-  (ivy-mode 1)
-  :bind ("C-x C-f" . counsel-find-file)
-  ("C-h f" . counsel-describe-function)
-  ("M-x" . counsel-M-x))
+(use-package helm-gtags
+ :ensure t)
 
-(use-package counsel-projectile
-  :ensure t
-  :init
-  (counsel-projectile-on))
+;;; Enable helm-gtags-mode
+(add-hook 'c-mode-hook 'helm-gtags-mode)
+(add-hook 'c++-mode-hook 'helm-gtags-mode)
+(add-hook 'asm-mode-hook 'helm-gtags-mode)
+
+;; customize
+(custom-set-variables
+ '(helm-gtags-path-style 'relative)
+ '(helm-gtags-ignore-case t)
+ '(helm-gtags-auto-update t))
+
+;; key bindings
+(with-eval-after-load 'helm-gtags
+  (define-key helm-gtags-mode-map (kbd "M-t") 'helm-gtags-find-tag)
+  (define-key helm-gtags-mode-map (kbd "M-r") 'helm-gtags-find-rtag)
+  (define-key helm-gtags-mode-map (kbd "M-s") 'helm-gtags-find-symbol)
+  (define-key helm-gtags-mode-map (kbd "M-g M-p") 'helm-gtags-parse-file)
+  (define-key helm-gtags-mode-map (kbd "C-c <") 'helm-gtags-previous-history)
+  (define-key helm-gtags-mode-map (kbd "C-c >") 'helm-gtags-next-history)
+  (define-key helm-gtags-mode-map (kbd "M-,") 'helm-gtags-pop-stack))
 
 (use-package smart-mode-line
   :ensure t
