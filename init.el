@@ -1,4 +1,3 @@
-
 ;; don't add package-initialize to init file
 (setq package--init-file-ensured t)
 
@@ -73,7 +72,7 @@
 (setq indent-tabs-mode nil)
 (setq tab-width 4)
 (setq c-default-style "linux"
-            c-basic-offset 4)
+	    c-basic-offset 4)
 
 ;; projectile
 (use-package projectile
@@ -81,26 +80,27 @@
   :init (setq projectile-enable-caching t)
   :config (projectile-global-mode))
 
-(use-package helm		
-  :ensure t		    
-  :diminish helm-mode		
-  :init		    
-   (require 'helm-config)
-   (helm-mode 1)	
-  :bind ("C-x C-f" . helm-find-files)
-   ("C-x b" . helm-mini)		
-   ("M-x" . helm-M-x))		
-  		  
-(use-package helm-projectile		
-  :ensure t		    
-  :init		    
+(use-package helm
+  :ensure t
+  :diminish helm-mode
+  :init
+  (require 'helm-config)
+  (helm-mode 1)
+  :bind
+  ("C-x C-f" . helm-find-files)
+  ("C-x b" . helm-mini)
+  ("M-x" . helm-M-x))
+
+(use-package helm-projectile
+  :ensure t
+  :init
   (require 'helm-projectile)
-  (helm-projectile-on))		
- 		
-(use-package helm-descbinds		
-  :ensure t)		
- 		
-(use-package helm-ag		
+  (helm-projectile-on))
+
+(use-package helm-descbinds
+  :ensure t)
+
+(use-package helm-ag
  :ensure t)
 
 (use-package helm-gtags
@@ -129,7 +129,7 @@
 
 (use-package smart-mode-line
   :ensure t
-  :disabled t	     
+  :disabled t
   :config
   (setq sml/no-confirm-load-theme t)
   (sml/setup))
@@ -150,10 +150,10 @@
 
 ;; inhibits highlighting in specific places, like in comments
 (setq ahs-inhibit-face-list '(font-lock-comment-delimiter-face
-                                font-lock-comment-face
-                                font-lock-doc-face
-                                font-lock-doc-string-face
-                                font-lock-string-face))
+				font-lock-comment-face
+				font-lock-doc-face
+				font-lock-doc-string-face
+				font-lock-string-face))
 
 ;; no custom config in init file please
 (setq custom-file "~/.emacs.d/custom.el")
