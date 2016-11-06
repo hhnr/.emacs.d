@@ -132,7 +132,8 @@
   (load-theme 'smyx t))
 
 (use-package auto-highlight-symbol
-  :ensure t)
+  :ensure t
+  :diminish auto-highlight-symbol-mode)
 
 (global-auto-highlight-symbol-mode)
 (define-key auto-highlight-symbol-mode-map (kbd "M-p") 'ahs-backward)
