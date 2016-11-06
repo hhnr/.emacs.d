@@ -8,7 +8,7 @@
 (menu-bar-mode -1)
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
-(setq cursor-type 'bar)
+(setq-default cursor-type 'bar)
 
 ;; disable auto-save and auto-backup
 (setq auto-save-default nil)
