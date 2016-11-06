@@ -51,7 +51,8 @@
 
 ;; highlight matching parens
 (show-paren-mode)
-
+;; highlight current line
+(global-hl-line-mode)
 ;; company mode
 (use-package company
   :ensure t
