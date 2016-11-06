@@ -8,6 +8,7 @@
 (menu-bar-mode -1)
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
+(setq cursor-type 'bar)
 
 ;; disable auto-save and auto-backup
 (setq auto-save-default nil)
@@ -148,3 +149,4 @@
 ;; no custom config in init file please
 (setq custom-file "~/.emacs.d/custom.el")
 (load custom-file 'noerror)
+
