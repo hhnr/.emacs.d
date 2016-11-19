@@ -126,4 +126,6 @@
 (setq custom-file "~/.emacs.d/custom.el")
 (load custom-file 'noerror)
 
+;; syntax hightlight in org mode 
+(setq org-src-fontify-natively t)
 #+END_SRC
