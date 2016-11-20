@@ -1,7 +1,7 @@
 # .emacs.d
 -----------
 
-Installating Emacs:
+Installing Emacs:
 
 ``` shell
 
