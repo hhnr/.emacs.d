@@ -1,8 +1,16 @@
+
+* Auto save and backups
 #+BEGIN_SRC emacs-lisp
 
 ;; disable auto-save and auto-backup
 (setq auto-save-default nil)
 (setq make-backup-files nil)
+
+#+END_SRC
+
+* Coding system
+
+#+BEGIN_SRC emacs-lisp
 
 ;; UTF-8 please
 (setq locale-coding-system 'utf-8)
@@ -11,8 +19,10 @@
 (set-selection-coding-system 'utf-8)
 (prefer-coding-system 'utf-8)
 
-;;; Package management
+#+END_SRC 
 
+* Package management
+#+BEGIN_SRC emacs-lisp
 ;; Please don't load outdated byte code
 (setq load-prefer-newer t)
 (require 'package)
@@ -30,6 +40,11 @@
   (require 'use-package))
 (setq use-package-verbose t)
 
+#+END_SRC
+
+* User Interface
+#+BEGIN_SRC emacs-lisp
+
 ;; Don't show startup message
 (setq inhibit-startup-message t)
 
@@ -44,10 +59,22 @@
 ;; load theme
 (load-theme 'manoj-dark t)
 
+#+END_SRC
+
+* Which key mode
+
+#+BEGIN_SRC emacs-lisp
+
 (use-package which-key
   :diminish (which-key-mode)
   :defer 5
   :config (which-key-mode))
+
+#+END_SRC
+
+* Company mode
+
+#+BEGIN_SRC emacs-lisp
 
 ;; company mode
 (use-package company
@@ -55,6 +82,12 @@
   :diminish company-mode
   :init (setq company-minimum-prefix-length 2)
   :config (global-company-mode 1))
+
+#+END_SRC
+
+* Misc
+
+#+BEGIN_SRC emacs-lisp
 
 ; highlight matching parens
 (show-paren-mode)
@@ -67,16 +100,24 @@
 (setq c-default-style "linux"
 	    c-basic-offset 4)
 
+
 ;; projectile
 (use-package projectile
   :ensure t
   :init (setq projectile-enable-caching t)
   :config (projectile-global-mode))
 
-(use-package helm-config
+#+END_SRC
+  
+* Helm
+
+#+BEGIN_SRC emacs-lisp
+
+(use-package helm
 ;;  :ensure t
   :diminish helm-mode
   :init
+  (require 'helm-config)
   (helm-mode 1)
   :bind
   ("C-x C-f" . helm-find-files)
@@ -119,10 +160,23 @@
   (define-key helm-gtags-mode-map (kbd "C-c >") 'helm-gtags-next-history)
   (define-key helm-gtags-mode-map (kbd "M-,") 'helm-gtags-pop-stack))
 
+#+END_SRC
+
+* Custom file
+
+#+BEGIN_SRC emacs-lisp
+
 ;; no custom config in init file please
 (setq custom-file "~/.emacs.d/custom.el")
 (load custom-file 'noerror)
 
+#+END_SRC
+
+* org mode
+
+#+BEGIN_SRC emacs-lisp
+
 ;; syntax hightlight in org mode 
 (setq org-src-fontify-natively t)
+
 #+END_SRC

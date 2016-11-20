@@ -10,8 +10,6 @@
 (set-selection-coding-system 'utf-8)
 (prefer-coding-system 'utf-8)
 
-;;; Package management
-
 ;; Please don't load outdated byte code
 (setq load-prefer-newer t)
 (require 'package)
@@ -66,16 +64,18 @@
 (setq c-default-style "linux"
             c-basic-offset 4)
 
+
 ;; projectile
 (use-package projectile
   :ensure t
   :init (setq projectile-enable-caching t)
   :config (projectile-global-mode))
 
-(use-package helm-config
+(use-package helm
 ;;  :ensure t
   :diminish helm-mode
   :init
+  (require 'helm-config)
   (helm-mode 1)
   :bind
   ("C-x C-f" . helm-find-files)
