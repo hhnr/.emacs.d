@@ -1,7 +1,4 @@
 
-;; don't add package-initialize to init file
-(setq package--init-file-ensured t)
-
 ;; disable auto-save and auto-backup
 (setq auto-save-default nil)
 (setq make-backup-files nil)
@@ -124,3 +121,6 @@
 ;; no custom config in init file please
 (setq custom-file "~/.emacs.d/custom.el")
 (load custom-file 'noerror)
+
+;; syntax hightlight in org mode 
+(setq org-src-fontify-natively t)
