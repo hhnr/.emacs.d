@@ -64,7 +64,6 @@
 (setq c-default-style "linux"
             c-basic-offset 4)
 
-
 ;; projectile
 (use-package projectile
   :ensure t
