@@ -15,6 +15,7 @@
 (require 'package)
 (setq package-enable-at-startup nil)
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
+(add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/") t)
 
 (package-initialize)
 
@@ -62,6 +63,9 @@
 (setq c-default-style "linux"
             c-basic-offset 4)
 
+;; typing y or n is enough for yes or no prompt
+(defalias 'yes-or-no-p 'y-or-n-p)
+
 ;; projectile
 (use-package projectile
   :init (setq projectile-enable-caching t)
@@ -82,6 +86,8 @@
 (use-package counsel-projectile
   :config
   (counsel-projectile-on))
+
+(use-package smex)
 
 ;; no custom config in init file please
 (setq custom-file "~/.emacs.d/custom.el")

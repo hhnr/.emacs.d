@@ -28,6 +28,7 @@
 (require 'package)
 (setq package-enable-at-startup nil)
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
+(add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/") t)
 
 (package-initialize)
 
@@ -97,6 +98,9 @@
 (setq tab-width 4)
 (setq c-default-style "linux"
 	    c-basic-offset 4)
+
+;; typing y or n is enough for yes or no prompt
+(defalias 'yes-or-no-p 'y-or-n-p)
 
 #+END_SRC
 
