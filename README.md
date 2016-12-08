@@ -1,15 +1,20 @@
 # .emacs.d
 -----------
 
-Installing Emacs:
+Installing Emacs from Git:
 
 ``` shell
 
-sudo add-apt-repository ppa:ubuntu-elisp/ppa
+#Clone emacs faster by ignoring the history
+git clone --depth 1 git://git.sv.gnu.org/emacs.git
 
-sudo apt-get update
+./autogen.sh
 
-sudo apt-get install emacs-snapshot
+./configure
+
+make
+
+sudo make install
 
 ```
 
