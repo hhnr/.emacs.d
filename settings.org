@@ -57,7 +57,7 @@
 (setq-default cursor-type 'bar)
 
 ;; load theme
-(load-theme 'manoj-dark t)
+(load-theme 'smyx t)
 
 #+END_SRC
 
@@ -182,5 +182,11 @@
 
 ;; syntax hightlight in org mode 
 (setq org-src-fontify-natively t)
+
+#+END_SRC
+* Magit
+#+BEGIN_SRC emacs-lisp
+
+(use-package magit)
 
 #+END_SRC
