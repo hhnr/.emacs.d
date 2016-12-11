@@ -82,10 +82,9 @@
   ("M-x" . helm-M-x))
 
 (use-package helm-projectile
-  :init
-  (require 'helm-projectile)
-  (helm-projectile-on))
-
+  :config
+  (helm-projectile-on)
+  :bind ("C-c p f" . helm-projectile-find-file))
 
 (use-package helm-descbinds             
   :ensure t)
