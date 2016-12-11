@@ -73,7 +73,7 @@
 
 (use-package helm
   :diminish helm-mode
-  :init
+  :config
   (require 'helm-config)
   (helm-mode 1)
   :bind   
@@ -87,10 +87,12 @@
   :bind ("C-c p f" . helm-projectile-find-file))
 
 (use-package helm-descbinds             
-  :ensure t)
+  :ensure t
+  :commands helm-descbinds)
 
 (use-package helm-ag            
-  :ensure t)
+  :ensure t
+  :commands helm-ag)
 
 (use-package helm-gtags         
   :ensure t
