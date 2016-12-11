@@ -68,7 +68,7 @@
 ;; projectile
 (use-package projectile
   :init (setq projectile-enable-caching t)
-  :commands projectile-find-file)
+  :commands projectile-find-file
   :config (projectile-global-mode))
 
 (use-package helm
