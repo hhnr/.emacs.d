@@ -50,7 +50,7 @@
   :init (setq company-minimum-prefix-length 2)
   :config (global-company-mode 1))
 
-					; highlight matching parens
+;; highlight matching parens
 (show-paren-mode)
 
 ;; highlight current line
@@ -68,6 +68,7 @@
 ;; projectile
 (use-package projectile
   :init (setq projectile-enable-caching t)
+  :commands projectile-find-file)
   :config (projectile-global-mode))
 
 (use-package helm
@@ -80,17 +81,17 @@
   ("C-x b" . helm-mini)           
   ("M-x" . helm-M-x))
 
-
 (use-package helm-projectile
   :init
   (require 'helm-projectile)
   (helm-projectile-on))
 
+
 (use-package helm-descbinds             
   :ensure t)
 
 (use-package helm-ag            
-  :ensure t)              
+  :ensure t)
 
 (use-package helm-gtags         
   :ensure t)
