@@ -50,7 +50,7 @@
   :init (setq company-minimum-prefix-length 2)
   :config (global-company-mode 1))
 
-; highlight matching parens
+					; highlight matching parens
 (show-paren-mode)
 
 ;; highlight current line
@@ -60,7 +60,7 @@
 (setq indent-tabs-mode nil)
 (setq tab-width 4)
 (setq c-default-style "linux"
-            c-basic-offset 4)
+      c-basic-offset 4)
 
 ;; typing y or n is enough for yes or no prompt
 (defalias 'yes-or-no-p 'y-or-n-p)
@@ -71,29 +71,29 @@
   :config (projectile-global-mode))
 
 (use-package helm
-         :diminish helm-mode
-        :init
-        (require 'helm-config)
-        (helm-mode 1)
-        :bind   
-        ("C-x C-f" . helm-find-files)
-        ("C-x b" . helm-mini)           
-        ("M-x" . helm-M-x))
+  :diminish helm-mode
+  :init
+  (require 'helm-config)
+  (helm-mode 1)
+  :bind   
+  ("C-x C-f" . helm-find-files)
+  ("C-x b" . helm-mini)           
+  ("M-x" . helm-M-x))
 
 
 (use-package helm-projectile
-        :init
-        (require 'helm-projectile)
-        (helm-projectile-on))
+  :init
+  (require 'helm-projectile)
+  (helm-projectile-on))
 
 (use-package helm-descbinds             
-        :ensure t)
+  :ensure t)
 
 (use-package helm-ag            
-        :ensure t)              
+  :ensure t)              
 
 (use-package helm-gtags         
-        :ensure t)
+  :ensure t)
 
 ;;; Enable helm-gtags-mode
 (add-hook 'c-mode-hook 'helm-gtags-mode)
