@@ -94,28 +94,27 @@
   :ensure t)
 
 (use-package helm-gtags         
-  :ensure t)
-
-;;; Enable helm-gtags-mode
-(add-hook 'c-mode-hook 'helm-gtags-mode)
-(add-hook 'c++-mode-hook 'helm-gtags-mode)
-(add-hook 'asm-mode-hook 'helm-gtags-mode)
-
-;; key bindings
-(with-eval-after-load 'helm-gtags
-  (define-key helm-gtags-mode-map (kbd "M-t") 'helm-gtags-find-tag)
-  (define-key helm-gtags-mode-map (kbd "M-r") 'helm-gtags-find-rtag)
-  (define-key helm-gtags-mode-map (kbd "M-s") 'helm-gtags-find-symbol)
-  (define-key helm-gtags-mode-map (kbd "M-g M-p") 'helm-gtags-parse-file)
-  (define-key helm-gtags-mode-map (kbd "C-c <") 'helm-gtags-previous-history)
-  (define-key helm-gtags-mode-map (kbd "C-c >") 'helm-gtags-next-history)
-  (define-key helm-gtags-mode-map (kbd "M-,") 'helm-gtags-pop-stack))
+  :ensure t
+  :config
+  ;; Enable helm-gtags-mode
+  (add-hook 'c-mode-hook 'helm-gtags-mode)
+  (add-hook 'c++-mode-hook 'helm-gtags-mode)
+  (add-hook 'asm-mode-hook 'helm-gtags-mode)
+  :bind (:map helm-gtags-mode-map
+	      ("M-t" . helm-gtags-find-tag)
+	      ("M-r" . helm-gtags-find-rtag)
+	      ("M-s" . helm-gtags-find-symbol)
+	      ("M-g M-p" . helm-gtags-parse-file)
+	      ("C-c <" . helm-gtags-pervious-history)
+	      ("C-c >" . helm-gtags-next-history)
+	      ("M-," . helm-gtags-pop-stack)))
 
 ;; no custom config in init file please
 (setq custom-file "~/.emacs.d/custom.el")
 (load custom-file 'noerror)
 
 (use-package magit
-  :commands magit-status)
+  :commands magit-status
+  :bind ("C-c m" . magit-status))
 
 
