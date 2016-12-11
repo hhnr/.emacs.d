@@ -3,8 +3,7 @@
 ;;; Code:
 (add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
-;;;### (autoloads nil "bind-key" "bind-key.el" (22536 52340 456327
-;;;;;;  954000))
+;;;### (autoloads nil "bind-key" "bind-key.el" (0 0 0 0))
 ;;; Generated autoloads from bind-key.el
 
 (autoload 'bind-key "bind-key" "\
@@ -61,6 +60,8 @@ function symbol (unquoted).
 Display all the personal keybindings defined by `bind-key'.
 
 \(fn)" t nil)
+
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "bind-key" '("compare-keybindings" "get-binding-description" "bind-key" "personal-keybindings" "override-global-m")))
 
 ;;;***
 

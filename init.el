@@ -38,14 +38,19 @@
 (setq-default cursor-type 'bar)
 
 ;; load theme
-(load-theme 'smyx t)
+(use-package smyx-theme
+  :ensure t
+  :config
+  (load-theme 'smyx t))
 
 (use-package which-key
+  :ensure t
   :diminish (which-key-mode)
   :config (which-key-mode))
 
 ;; company mode
 (use-package company
+  :ensure t
   :diminish company-mode
   :init (setq company-minimum-prefix-length 2)
   :config (global-company-mode 1))
@@ -67,11 +72,13 @@
 
 ;; projectile
 (use-package projectile
+  :ensure t
   :init (setq projectile-enable-caching t)
   :commands projectile-find-file
   :config (projectile-global-mode))
 
 (use-package helm
+  :ensure t
   :diminish helm-mode
   :config
   (require 'helm-config)
@@ -82,6 +89,7 @@
   ("M-x" . helm-M-x))
 
 (use-package helm-projectile
+  :ensure t
   :config
   (helm-projectile-on)
   :bind ("C-c p f" . helm-projectile-find-file))
@@ -115,7 +123,12 @@
 (load custom-file 'noerror)
 
 (use-package magit
+  :ensure t
   :commands magit-status
   :bind ("C-c m" . magit-status))
+
+(use-package esup
+  :commands esup
+  :ensure t)
 
 

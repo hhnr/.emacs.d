@@ -3,7 +3,10 @@
 ;;; Code:
 (add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
-;;;### (autoloads nil nil ("popup.el") (22536 52675 556335 600000))
+;;;### (autoloads nil "popup" "popup.el" (0 0 0 0))
+;;; Generated autoloads from popup.el
+
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "popup" '("popup-")))
 
 ;;;***
 
