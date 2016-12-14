@@ -92,7 +92,8 @@
   :ensure t
   :config
   (helm-projectile-on)
-  :bind ("C-c p f" . helm-projectile-find-file))
+  :bind ("C-c p f" . helm-projectile-find-file)
+  ("C-c p p" . helm-projectile-switch-project))
 
 (use-package helm-descbinds             
   :ensure t
