@@ -155,3 +155,15 @@
       smtpmail-smtp-server "smtp.gmail.com"
       smtpmail-smtp-service 587
       starttls-use-gnutls t)
+
+;; recentf mode
+;; https://www.emacswiki.org/emacs/RecentFiles
+(use-package recentf
+  :init
+  (setq recentf-max-menu-items 25)
+  :bind ("C-x C-r" . helm-recentf)
+  :config
+  (recentf-mode 1)
+  ;; periodically save the list of files
+  (run-at-time nil (* 5 60) 'recentf-save-list))
+  
