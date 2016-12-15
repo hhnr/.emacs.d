@@ -75,7 +75,7 @@
   :ensure t
   :init (setq projectile-enable-caching t)
   :commands projectile-find-file
-  :config (projectile-global-mode))
+  :config (projectile-mode))
 
 (use-package helm
   :ensure t
