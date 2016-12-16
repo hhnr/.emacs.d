@@ -80,12 +80,15 @@
 (use-package helm
   :ensure t
   :diminish helm-mode
+  :init
+  (setq helm-mode-fuzzy-match t)
+  (setq helm-completion-in-region-fuzzy-match t) 
   :config
   (require 'helm-config)
   (helm-mode 1)
-  :bind   
+  :bind
   ("C-x C-f" . helm-find-files)
-  ("C-x b" . helm-mini)           
+  ("C-x b" . helm-mini)
   ("M-x" . helm-M-x))
 
 (use-package helm-projectile
