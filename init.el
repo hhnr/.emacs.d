@@ -172,3 +172,11 @@
 
 ;; delete selected text on insert
 (delete-selection-mode +1)
+
+;; paredit mode
+(use-package paredit
+  :ensure t
+  :config
+  (paredit-mode 1))
+
+
