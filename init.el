@@ -197,3 +197,8 @@
   (add-hook 'emacs-lisp-mode-hook       'enable-paredit-mode)
   (add-hook 'lisp-mode-hook             'enable-paredit-mode)
   (add-hook 'lisp-interaction-mode-hook 'enable-paredit-mode))
+
+
+;; improve emacs display performance
+;; https://www.masteringemacs.org/article/improving-performance-emacs-display-engine
+(setq redisplay-dont-pause t)
