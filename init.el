@@ -166,4 +166,6 @@
   (recentf-mode 1)
   ;; periodically save the list of files
   (run-at-time nil (* 5 60) 'recentf-save-list))
-  
+
+;; kill the current buffer without a prompt
+(global-set-key (kbd "C-x k") 'kill-this-buffer)
