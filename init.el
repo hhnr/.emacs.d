@@ -169,3 +169,6 @@
 
 ;; kill the current buffer without a prompt
 (global-set-key (kbd "C-x k") 'kill-this-buffer)
+
+;; delete selected text on insert
+(delete-selection-mode +1)
