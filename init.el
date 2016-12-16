@@ -81,8 +81,21 @@
   :ensure t
   :diminish helm-mode
   :init
+  ;; enable fuzzy matching everywhere
+  ;; https://github.com/emacs-helm/helm/wiki/Fuzzy-matching  
+  (setq helm-recentf-fuzzy-match t)
+  (setq helm-buffers-fuzzy-matching t)
+  (setq helm-recentf-fuzzy-match t)
+  (setq helm-buffers-fuzzy-matching t)
+  (setq helm-locate-fuzzy-match t)
+  (setq helm-M-x-fuzzy-match t)
+  (setq helm-semantic-fuzzy-match t)
+  (setq helm-imenu-fuzzy-match t)
+  (setq helm-apropos-fuzzy-match t)
+  (setq helm-lisp-fuzzy-completion t)
   (setq helm-mode-fuzzy-match t)
-  (setq helm-completion-in-region-fuzzy-match t) 
+  (setq helm-completion-in-region-fuzzy-match t)
+
   :config
   (require 'helm-config)
   (helm-mode 1)
