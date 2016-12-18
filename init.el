@@ -1,4 +1,3 @@
-
 ;; disable auto-save and auto-backup
 (setq auto-save-default nil)
 (setq make-backup-files nil)
@@ -82,7 +81,7 @@
   :diminish helm-mode
   :init
   ;; enable fuzzy matching everywhere
-  ;; https://github.com/emacs-helm/helm/wiki/Fuzzy-matching  
+  ;; https://github.com/emacs-helm/helm/wiki/Fuzzy-matching
   (setq helm-recentf-fuzzy-match t)
   (setq helm-buffers-fuzzy-matching t)
   (setq helm-recentf-fuzzy-match t)
@@ -111,15 +110,15 @@
   :bind ("C-c p f" . helm-projectile-find-file)
   ("C-c p p" . helm-projectile-switch-project))
 
-(use-package helm-descbinds             
+(use-package helm-descbinds
   :ensure t
   :commands helm-descbinds)
 
-(use-package helm-ag            
+(use-package helm-ag
   :ensure t
   :commands helm-ag)
 
-(use-package helm-gtags         
+(use-package helm-gtags
   :ensure t
   :config
   ;; Enable helm-gtags-mode
@@ -149,7 +148,7 @@
   :ensure t)
 
 ;; gnus
-;; saving mail locally 
+;; saving mail locally
 (require 'gnus)
 (setq nnml-directory "~/gmail")
 (setq message-directory "~/gmail")
@@ -159,9 +158,9 @@
 ;; getting mail
 (setq gnus-select-method
       '(nnimap "gmail"
-               (nnimap-address "imap.gmail.com")
-               (nnimap-server-port 993)
-               (nnimap-stream ssl)))
+	       (nnimap-address "imap.gmail.com")
+	       (nnimap-server-port 993)
+	       (nnimap-stream ssl)))
 
 ;; sending mail
 (setq message-send-mail-function 'smtpmail-send-it
