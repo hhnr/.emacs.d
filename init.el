@@ -137,8 +137,7 @@
 ;; no custom config in init file please
 (setq custom-file "~/.emacs.d/custom.el")
 (load custom-file 'noerror)
-(require 'dashboard)
-(dashboard-setup-startup-hook)
+
 (use-package magit
   :ensure t
   :commands magit-status
