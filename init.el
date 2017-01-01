@@ -107,7 +107,7 @@
   :ensure t
   :config
   (helm-projectile-on)
-  :bind ("C-c p f" . helm-projectile-find-file)
+  :bind ("C-c p f" . helm-find)
   ("C-c p p" . helm-projectile-switch-project))
 
 (use-package helm-descbinds
@@ -137,7 +137,8 @@
 ;; no custom config in init file please
 (setq custom-file "~/.emacs.d/custom.el")
 (load custom-file 'noerror)
-
+(require 'dashboard)
+(dashboard-setup-startup-hook)
 (use-package magit
   :ensure t
   :commands magit-status
