@@ -207,3 +207,4 @@
   :diminish golden-ratio-mode
   :init
   (golden-ratio-mode 1))
+
