@@ -120,7 +120,7 @@
 
 (use-package helm-gtags
   :ensure t
-  :config
+  :init
   ;; Enable helm-gtags-mode
   (add-hook 'c-mode-hook 'helm-gtags-mode)
   (add-hook 'c++-mode-hook 'helm-gtags-mode)
