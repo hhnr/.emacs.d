@@ -8,6 +8,8 @@ Installing Emacs from Git:
 #Clone emacs faster by ignoring the history
 git clone --depth 1 git://git.sv.gnu.org/emacs.git
 
+cd emacs
+
 ./autogen.sh
 
 ./configure
