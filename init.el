@@ -40,7 +40,8 @@
 (use-package smyx-theme
   :ensure t
   :config
-  (load-theme 'smyx t))
+;;  (load-theme 'smyx t)
+    (load-theme 'leuven t))
 
 (use-package which-key
   :ensure t
