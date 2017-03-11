@@ -1,4 +1,0 @@
-* Learn how to use helm-gtags instead of ggtags
-* proper usage of use-package and customize accordingly
-* evil mode maybe?
-* learn to use magit.
