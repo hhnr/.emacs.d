@@ -8,4 +8,8 @@
 (setq auto-save-file-name-transforms
       `((".*" ,temporary-file-directory t)))
 
+;;; detach custom file
+;;; http://emacsblog.org/2008/12/06/quick-tip-detaching-the-custom-file/
+(setq custom-file "~/.emacs.d/custom.el")
+(load custom-file 'noerror)
 (provide 'init-misc)
