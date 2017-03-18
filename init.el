@@ -4,6 +4,7 @@
 
 (require 'init-misc)
 (require 'init-packages)
+(require 'init-which-key)
 (require 'init-ido)
 (require 'init-smex)
 (require 'init-magit)
