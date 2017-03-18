@@ -8,4 +8,5 @@
 (require 'init-ido)
 (require 'init-smex)
 (require 'init-magit)
+(require 'init-ag)
 (require 'init-appearance)
