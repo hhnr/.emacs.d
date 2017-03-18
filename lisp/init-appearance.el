@@ -8,4 +8,12 @@
   :init
   (load-theme 'spacemacs-dark t))
 
+;;; spaceline theme
+;;; https://github.com/TheBB/spaceline
+(use-package spaceline
+  :ensure t
+  :init
+  (use-package spaceline-config)
+  (spaceline-spacemacs-theme))
+
 (provide 'init-appearance)
