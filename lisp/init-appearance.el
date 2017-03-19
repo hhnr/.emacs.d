@@ -19,4 +19,6 @@
 ;;; set dejavu font
 (set-frame-font "DejaVu Sans Mono-10")
 
+;;; disable scrollbar mode
+(scroll-bar-mode -1)
 (provide 'init-appearance)
