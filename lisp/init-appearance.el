@@ -16,4 +16,7 @@
   (use-package spaceline-config)
   (spaceline-spacemacs-theme))
 
+;;; set dejavu font
+(set-frame-font "DejaVu Sans Mono-10")
+
 (provide 'init-appearance)
