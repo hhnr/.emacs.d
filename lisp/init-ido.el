@@ -13,6 +13,18 @@
   :init
   (ido-ubiquitous-mode 1))
 
+(use-package crm-custom
+  :ensure t
+  :defer t
+  :init
+  (crm-custom-mode 1))
+
+(use-package ido-yes-or-no
+  :ensure t
+  :defer t
+  :init
+  (ido-yes-or-no-mode 1))
+
 ;;; ido-flx
 ;;; https://github.com/lewang/flx
 (use-package flx-ido
