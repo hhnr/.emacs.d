@@ -21,4 +21,7 @@
 
 ;;; disable scrollbar mode
 (scroll-bar-mode -1)
+
+;; highlight matching parens
+(show-paren-mode)
 (provide 'init-appearance)
