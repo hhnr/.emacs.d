@@ -12,3 +12,4 @@
 (require 'init-ag)
 (require 'init-appearance)
 (require 'init-highlight-symbol)
+(require 'init-company)
