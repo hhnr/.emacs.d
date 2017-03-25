@@ -13,7 +13,8 @@
     ;; ignore boring files like .o and .a
     (setq helm-ff-skip-boring-files t))
   :bind ("M-x" . helm-M-x)
-  ("C-x C-f" . helm-find-files))
+  ("C-x C-f" . helm-find-files)
+  ("C-x b" . helm-mini))
 
 ;; helm-descbinds
 ;; https://github.com/emacs-helm/helm-descbinds
