@@ -33,4 +33,10 @@
   :ensure t
   :bind ("C-h b" . helm-descbinds))
 
+;; emacs-helm-ag
+;; https://github.com/syohex/emacs-helm-ag
+(use-package helm-ag
+  :ensure t
+  :commands helm-ag)
+
 (provide 'init-helm)
