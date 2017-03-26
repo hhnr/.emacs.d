@@ -39,4 +39,22 @@
   :ensure t
   :commands helm-ag)
 
+;; helm-cscope
+;; https://github.com/alpha22jp/helm-cscope.el
+(use-package helm-cscope
+  ;;  :ensure t
+  :load-path "site-lisp/helm-cscope.el"
+  :commands (helm-cscope-find-global-definition
+	     helm-cscope-find-calling-this-function
+	     helm-cscope-find-this-symbol
+	     helm-cscope-pop-mark)
+  :init
+  (add-hook 'c-mode-common-hook 'helm-cscope-mode)
+  (add-hook 'helm-cscope-mode-hook
+	    (lambda ()
+	      (local-set-key (kbd "M-.") 'helm-cscope-find-global-definition)
+	      (local-set-key (kbd "M-@") 'helm-cscope-find-calling-this-function)
+	      (local-set-key (kbd "M-s") 'helm-cscope-find-this-symbol)
+	      (local-set-key (kbd "M-,") 'helm-cscope-pop-mark))))
+
 (provide 'init-helm)
