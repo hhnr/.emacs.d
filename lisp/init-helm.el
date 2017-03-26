@@ -20,6 +20,7 @@
     (setq helm-apropos-fuzzy-match t)
     (add-to-list 'helm-sources-using-default-as-input 'helm-source-man-pages)
     (helm-mode 1))
+  :diminish helm-mode
   :bind ("M-x" . helm-M-x)
   ("C-x C-f" . helm-find-files)
   ("C-x b" . helm-mini)
