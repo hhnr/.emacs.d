@@ -42,8 +42,7 @@
 ;; helm-cscope
 ;; https://github.com/alpha22jp/helm-cscope.el
 (use-package helm-cscope
-  ;;  :ensure t
-  :load-path "site-lisp/helm-cscope.el"
+  :ensure t
   :commands (helm-cscope-find-global-definition
 	     helm-cscope-find-calling-this-function
 	     helm-cscope-find-this-symbol
