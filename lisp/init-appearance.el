@@ -20,7 +20,7 @@
   (spaceline-spacemacs-theme))
 
 ;; set theme
-(load-theme 'misterioso t)
+;;(load-theme 'misterioso t)
 
 ;;; set dejavu font
 (set-frame-font "DejaVu Sans Mono-10")
