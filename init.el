@@ -1,3 +1,6 @@
+;; stop editing my init file with package-initialize
+(setq package--init-file-ensured t)
+
 ;;; add lisp directory to load path,
 ;;; so that we can require files that are inside lisp directory
 (add-to-list 'load-path "~/.emacs.d/lisp/")
