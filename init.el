@@ -19,3 +19,4 @@
 (require 'init-highlight-symbol)
 (require 'init-company)
 (require 'init-electric-pair)
+(require 'init-js)
