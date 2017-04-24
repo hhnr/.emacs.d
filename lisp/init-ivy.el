@@ -1,5 +1,6 @@
 (use-package counsel
   :ensure t
+  :diminish ivy-mode
   :init
   (progn
     (ivy-mode 1)
