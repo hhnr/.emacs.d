@@ -22,4 +22,9 @@
     (global-set-key (kbd "C-S-o") 'counsel-rhythmbox)
     (define-key read-expression-map (kbd "C-r") 'counsel-expression-history)))
 
+(use-package smex
+  :ensure t
+  :init
+  (smex-initialize))
+
 (provide 'init-ivy)
