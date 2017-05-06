@@ -20,3 +20,4 @@
 (require 'init-company)
 (require 'init-electric-pair)
 (require 'init-js)
+(require 'init-projectile)
