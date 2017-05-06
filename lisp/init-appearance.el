@@ -1,6 +1,11 @@
 ;;; disable splash screen on emacs start
 (setq inhibit-splash-screen t)
 
+(use-package zenburn-theme
+  :ensure t
+  :init
+  (load-theme 'zenburn t))
+
 ;;; spacemacs theme
 ;;; https://github.com/nashamri/spacemacs-theme
 (use-package spacemacs-theme
