@@ -6,27 +6,6 @@
   :init
   (load-theme 'zenburn t))
 
-;;; spacemacs theme
-;;; https://github.com/nashamri/spacemacs-theme
-(use-package spacemacs-theme
-  :ensure t
-  :disabled t
-  :defer t
-  :init
-  (load-theme 'spacemacs-dark t))
-
-;;; spaceline theme
-;;; https://github.com/TheBB/spaceline
-(use-package spaceline
-  :ensure t
-  :disabled t
-  :init
-  (use-package spaceline-config)
-  (spaceline-spacemacs-theme))
-
-;; set theme
-;;(load-theme 'misterioso t)
-
 ;;; set dejavu font
 (set-frame-font "DejaVu Sans Mono-10")
 
