@@ -2,7 +2,7 @@
 ;; https://github.com/emacs-helm/helm
 (use-package helm
   :ensure t
-  :disabled t
+;;  :disabled t
   :config
   (use-package helm-config
     :init
@@ -32,21 +32,21 @@
 ;; https://github.com/emacs-helm/helm-descbinds
 (use-package helm-descbinds
   :ensure t
-  :disabled t
+;;  :disabled t
   :bind ("C-h b" . helm-descbinds))
 
 ;; emacs-helm-ag
 ;; https://github.com/syohex/emacs-helm-ag
 (use-package helm-ag
   :ensure t
-  :disabled t
+;;  :disabled t
   :commands helm-ag)
 
 ;; helm-cscope
 ;; https://github.com/alpha22jp/helm-cscope.el
 (use-package helm-cscope
   :ensure t
-  :disabled t
+;;  :disabled t
   :commands (helm-cscope-find-global-definition
 	     helm-cscope-find-calling-this-function
 	     helm-cscope-find-this-symbol
