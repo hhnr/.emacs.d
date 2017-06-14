@@ -7,7 +7,7 @@
   (load-theme 'zenburn t))
 
 ;;; set dejavu font
-(set-frame-font "Terminus-10")
+;;;(set-frame-font "Terminus-10")
 
 ;;; disable scrollbar mode
 (scroll-bar-mode -1)
