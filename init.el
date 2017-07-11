@@ -21,3 +21,4 @@
 (require 'init-electric-pair)
 (require 'init-js)
 (require 'init-projectile)
+(require 'init-evil)
