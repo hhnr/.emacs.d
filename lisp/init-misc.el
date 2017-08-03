@@ -11,7 +11,7 @@
 ;;; detach custom file
 ;;; http://emacsblog.org/2008/12/06/quick-tip-detaching-the-custom-file/
 (setq custom-file "~/.emacs.d/custom.el")
-(load custom-file 'noerror)
+;;(load custom-file 'noerror)
 
 (global-auto-revert-mode)
 (provide 'init-misc)
