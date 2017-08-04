@@ -16,4 +16,11 @@
 (require 'diminish)                ;; if you use :diminish
 (require 'bind-key)                ;; if you use any :bind variant
 
+;; paradox
+;; https://github.com/Malabarba/paradox
+(use-package paradox
+  :ensure t
+  :config
+  (paradox-enable))
+
 (provide 'init-packages)
