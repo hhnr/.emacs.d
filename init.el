@@ -20,5 +20,6 @@
 (require 'init-company)
 (require 'init-electric-pair)
 (require 'init-js)
+(require 'init-c)
 (require 'init-projectile)
 ;;(require 'init-evil)
