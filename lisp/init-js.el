@@ -2,6 +2,7 @@
 ;; https://emacs.cafe/emacs/javascript/setup/2017/04/23/emacs-setup-javascript.html
 (use-package js2-mode
   :ensure t
+  :defer t
   :init
   (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
   ;; Better imenu
@@ -10,6 +11,7 @@
 ;; xref-js2
 (use-package xref-js2
   :ensure t
+  :defer t
   :init
   ;; js-mode (which js2 is based on) binds "M-." which conflicts with xref, so
   ;; unbind it.
