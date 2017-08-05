@@ -4,5 +4,7 @@
   :ensure t
   :diminish which-key-mode
   :init
+  (setq which-key-dont-use-unicode t)
+  :config
   (which-key-mode))
 (provide 'init-which-key)
