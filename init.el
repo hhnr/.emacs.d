@@ -22,4 +22,5 @@
 (require 'init-js)
 (require 'init-c)
 (require 'init-projectile)
+(require 'init-eldoc)
 ;;(require 'init-evil)
