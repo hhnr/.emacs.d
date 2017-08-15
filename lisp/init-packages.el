@@ -2,6 +2,8 @@
 ;;; http://melpa.milkbox.net/#/getting-started
 (require 'package) 
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
+;; set package-enable-at-startup to nil for slightly faster startup
+(setq package-enable-at-startup nil)
 (package-initialize)
 
 ;;; install use-package if not installed
