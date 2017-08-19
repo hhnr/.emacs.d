@@ -1,11 +1,11 @@
 ;;; disable splash screen on emacs start
 (setq inhibit-splash-screen t)
 
-(use-package solarized-theme
-  :ensure t
-  :init
-  (load-theme 'solarized-dark t))
-
+;; (use-package solarized-theme
+;;   :ensure t
+;;   :init
+;;   (load-theme 'solarized-dark t))
+(load-theme 'leuven t)
 ;;; set dejavu font
 ;;;(set-frame-font "Terminus-10")
 
