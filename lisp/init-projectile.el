@@ -2,8 +2,9 @@
 (use-package projectile
   :defer t
   :ensure t
-  :init
-  (projectile-mode))
+  :bind ("C-c p f" .  projectile-find-file)
+  :config
+  (projectile-global-mode t))
 
 (use-package counsel-projectile
   :defer t
