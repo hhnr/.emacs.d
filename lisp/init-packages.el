@@ -22,7 +22,8 @@
 ;; https://github.com/Malabarba/paradox
 (use-package paradox
   :ensure t
-  :config
-  (paradox-enable))
+  :commands paradox-list-packages)
+  ;; :config
+  ;; (paradox-enable))
 
 (provide 'init-packages)

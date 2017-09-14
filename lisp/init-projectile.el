@@ -8,9 +8,11 @@
 (use-package counsel-projectile
   :defer t
   :ensure t
-;;  :disabled t
   :init
-  (counsel-projectile-on))
+  (setq projectile-completion-system 'ivy))
+  ;; :disabled t
+  ;; :init
+  ;; (counsel-projectile-on))
 
 (use-package helm-projectile
   :ensure t
