@@ -1,12 +1,12 @@
 ;; projectile
 (use-package projectile
-  :defer
+  :defer t
   :ensure t
   :init
   (projectile-mode))
 
 (use-package counsel-projectile
-  :defer
+  :defer t
   :ensure t
 ;;  :disabled t
   :init
