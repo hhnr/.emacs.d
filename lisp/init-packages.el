@@ -15,6 +15,9 @@
 ;;; https://github.com/jwiegley/use-package
 (eval-when-compile
   (require 'use-package))
+(use-package diminish
+  :ensure t)
+
 (require 'diminish)                ;; if you use :diminish
 (require 'bind-key)                ;; if you use any :bind variant
 
