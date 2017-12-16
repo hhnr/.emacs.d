@@ -100,8 +100,8 @@
 ;;; set dejavu font
 ;;;(set-frame-font "Terminus-10")
 
-(set-background-color "black")
-(set-foreground-color "white")
+;;(set-background-color "black")
+;;(set-foreground-color "white")
 
 ;;; disable scrollbar mode
 (scroll-bar-mode -1)
