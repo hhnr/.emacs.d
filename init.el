@@ -18,6 +18,8 @@
 
 (global-auto-revert-mode)
 
+(setq package-user-dir (format "%selpa_%s/" user-emacs-directory emacs-major-version))
+
 ;;; setup package archives
 ;;; http://melpa.milkbox.net/#/getting-started
 (require 'package) 
