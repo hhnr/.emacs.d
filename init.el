@@ -1,6 +1,8 @@
 ;; stop editing my init file with package-initialize
 (setq package--init-file-ensured t)
 
+(global-set-key [(control ?h)] 'delete-backward-char)
+
 ;;; prefer utf8 encoding
 (prefer-coding-system 'utf-8)
 
